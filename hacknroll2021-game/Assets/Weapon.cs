@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
 
     public Transform firePoint;
+    public GameObject playerBulletPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,8 @@ public class Weapon : MonoBehaviour
         
     }
 
-    void Shoot()
+    public void Shoot()
     {
-
+        Instantiate(playerBulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
